@@ -3,10 +3,10 @@ import { Link, A } from "@solidjs/router";
 
 export const Navbar: Component = () => {
   return (
-    <nav class="w-full h-16 px-6 md:px-12 flex justify-between items-center bg-slate-800 fixed top-0 left-0 right-0 z-50">
+    <nav class="w-full h-16 px-4 md:px-12 flex justify-between items-center bg-slate-800 fixed top-0 left-0 right-0 z-50">
       <Link class="block" href="/">
         <svg
-          class="w-12 hover:scale-110 ease-in-out duration-500"
+          class="w-8 md:w-12 hover:scale-110 ease-in-out duration-500"
           viewBox="0 0 48 48"
         >
           <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
@@ -22,7 +22,7 @@ export const Navbar: Component = () => {
         </svg>
       </Link>
 
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2 md:gap-4">
         <A
           end
           class="border-0"
@@ -40,7 +40,7 @@ export const Navbar: Component = () => {
         </A>
       </div>
 
-      <p class="text-2xl font-black">Axum Frontend App</p>
+      <p class="text-xl md:text-2xl font-black">Axum Frontend App</p>
     </nav>
   );
 };

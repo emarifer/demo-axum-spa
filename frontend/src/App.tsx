@@ -10,21 +10,21 @@ const App: Component = () => {
     <>
       <Navbar />
 
-      <div class="flex flex-col mt-32 w-[400px] mx-auto gap-6">
+      <div class="flex flex-col mt-32 w-60 md:w-[400px] mx-auto gap-6">
         <header class="flex flex-col mx-auto w-full">
-          <h1 class="text-3xl text-center font-black mb-5">
+          <h1 class="text-xl md:text-3xl text-center font-black mb-5">
             Demo application with frontend made with Solidjs and as backend
             Axum/Rust.
           </h1>
 
           <img
-            class="w-32 mb-8 mx-auto hover:scale-110 ease-in-out duration-500"
+            class="w-24 md:w-32 mb-8 mx-auto hover:scale-110 ease-in-out duration-500"
             src={logo}
             alt="App logo"
           />
         </header>
 
-        <main class="mx-auto w-full my-4">
+        <main class="pl-4 w-full my-2 md:my-4">
           <Routes>
             <Route path="/" component={Home} />
             <Route path="/about" component={About} />
