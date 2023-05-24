@@ -1,5 +1,6 @@
 import type { Component } from "solid-js";
 import { Link, A } from "@solidjs/router";
+import { setShowSidebar, showSidebar } from "../store";
 
 export const Navbar: Component = () => {
   return (
@@ -22,25 +23,44 @@ export const Navbar: Component = () => {
         </svg>
       </Link>
 
-      <div class="flex items-center gap-2 md:gap-4">
-        <A
-          end
-          class="border-0"
-          activeClass="border-b-2 border-sky-500"
-          href="/"
-        >
-          Home
-        </A>
-        <A
-          class="border-0"
-          activeClass="border-b-2 border-sky-500"
-          href="/about"
-        >
-          About
-        </A>
+      <div class="hidden md:flex md:items-center md:gap-16">
+        <div class="flex items-center gap-2 md:gap-4">
+          <A
+            end
+            class="border-0"
+            activeClass="border-b-2 border-sky-500"
+            href="/"
+          >
+            Home
+          </A>
+          <A
+            class="border-0"
+            activeClass="border-b-2 border-sky-500"
+            href="/about"
+          >
+            About
+          </A>
+        </div>
+
+        <p class="text-2xl font-black">Axum Frontend App</p>
       </div>
 
-      <p class="text-xl md:text-2xl font-black">Axum Frontend App</p>
+      <div class="md:hidden flex gap-6">
+        <p class="text-lg font-bold">Axum Frontend App</p>
+
+        <button
+          class="md:hidden"
+          onclick={() => setShowSidebar(!showSidebar())}
+        >
+          <svg class="w-6" fill="currentColor" viewBox="0 0 16 16">
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 \
+	      0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+        </button>
+      </div>
     </nav>
   );
 };

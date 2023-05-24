@@ -1,8 +1,8 @@
-import type { Component } from "solid-js";
+import { Component } from "solid-js";
 import { Routes, Route } from "@solidjs/router";
 
 import logo from "./assets/img/logo.png";
-import { Navbar } from "./components";
+import { Navbar, Sidebar } from "./components";
 import { About, Home, NotFound } from "./pages";
 
 const App: Component = () => {
@@ -42,8 +42,19 @@ const App: Component = () => {
           </a>
         </footer>
       </div>
+
+      <Sidebar />
     </>
   );
 };
 
 export default App;
+
+/*
+ * USO DEL COMPONENTE "A" PARA ENLACES ACTIVOS. VER:
+ * https://docs.solidjs.com/guides/how-to-guides/routing-in-solid/solid-router#the-a-component
+ *
+ * RENDERIZADO Y ESTILOS CONDICIONALES. VER:
+ * https://www.solidjs.com/tutorial/bindings_classlist
+ * https://www.solidjs.com/tutorial/flow_show
+ */
